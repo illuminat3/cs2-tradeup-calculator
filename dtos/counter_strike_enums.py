@@ -1,83 +1,4 @@
-from dataclasses import dataclass
 from enum import Enum
-
-@dataclass
-class skin:
-	@property
-	def skin_name(self) -> str:
-		return f"{self.weapon_type} | {self.finish_name}"
-
-	finish_name: str
-	weapon_type: weapon_type
-	collection_name: collection
-	min_float: float
-	max_float: float
-	float_value: float
-	rarity: rarity 
-
-class weapon_type(Enum):
-	DesertEagle = "weapon_deagle"
-	DualBerettas = "weapon_elite"
-	FiveSeven = "weapon_fiveseven"
-	Glock18 = "weapon_glock"
-	P2000 = "weapon_hkp2000"
-	P250 = "weapon_p250"
-	USP_S = "weapon_usp_silencer"
-	CZ75Auto = "weapon_cz75a"
-	R8Revolver = "weapon_revolver"
-	Tec9 = "weapon_tec9"
-	Mac10 = "weapon_mac10"
-	MP5SD = "weapon_mp5sd"
-	MP7 = "weapon_mp7"
-	MP9 = "weapon_mp9"
-	P90 = "weapon_p90"
-	PPBizon = "weapon_bizon"
-	UMP45 = "weapon_ump45"
-	AK47 = "weapon_ak47"
-	Aug = "weapon_aug"
-	Famas = "weapon_famas"
-	Galil = "weapon_galilar"
-	M4A1 = "weapon_m4a1"
-	M4A1_S = "weapon_m4a1_silencer"
-	SG556 = "weapon_sg556"
-	AWP = "weapon_awp"
-	G3SG1 = "weapon_g3sg1"
-	Scar20 = "weapon_scar20"
-	M249 = "weapon_m249"
-	Negev = "weapon_negev"
-	Nova = "weapon_nova"
-	SawedOff = "weapon_sawedoff"
-	Mag7 = "weapon_mag7"
-	XM1014 = "weapon_xm1014"
-	Bayonet = "weapon_bayonet"
-	FlipKnife = "weapon_knife_flip"
-	GutKnife = "weapon_knife_gut"
-	Karambit = "weapon_knife_karambit"
-	M9Bayonet = "weapon_knife_m9_bayonet"
-	HuntsmanKnife = "weapon_knife_tactical"
-	FalchionKnife = "weapon_knife_falchion"
-	BowieKnife = "weapon_knife_survival_bowie"
-	ButterflyKnife = "weapon_knife_butterfly"
-	ShaddowDaggers = "weapon_knife_push"
-	ParacordKnife = "weapon_knife_cord"
-	SurvivalKnife = "weapon_knife_canis"
-	UrsusKnife = "weapon_knife_ursus"
-	NajavaKnife = "weapon_knife_gypsy_jackknife"
-	NomadKnife = "weapon_knife_outdoor"
-	StilettoKnife = "weapon_knife_stiletto"
-	TalonKnife = "weapon_knife_widowmaker"
-	SkeletonKnife = "weapon_knife_skeleton"
-	ClassKnife = "weapon_knife_css"
-	Zeus = "weapon_taser"
-
-class rarity(Enum):
-	consumer = 1
-	industrial = 2
-	milspec = 3
-	restricted = 4
-	classified = 5
-	covert = 6
-	gold = 7 
 
 class collection(Enum):
 	TheDustCollection = "set_dust"
@@ -174,3 +95,67 @@ class collection(Enum):
 	OperationRiptideAgents = "set_op11_characters"
 	BrokenFangAgents = "set_op10_characters"
 	ShatteredWebAgents = "set_op9_characters"
+	
+class rarity(Enum):
+	consumer = 1
+	industrial = 2
+	milspec = 3
+	restricted = 4
+	classified = 5
+	covert = 6
+	gold = 7 
+
+class weapon_type(Enum):
+	DesertEagle = "weapon_deagle"
+	DualBerettas = "weapon_elite"
+	FiveSeven = "weapon_fiveseven"
+	Glock18 = "weapon_glock"
+	P2000 = "weapon_hkp2000"
+	P250 = "weapon_p250"
+	USP_S = "weapon_usp_silencer"
+	CZ75Auto = "weapon_cz75a"
+	R8Revolver = "weapon_revolver"
+	Tec9 = "weapon_tec9"
+	Mac10 = "weapon_mac10"
+	MP5SD = "weapon_mp5sd"
+	MP7 = "weapon_mp7"
+	MP9 = "weapon_mp9"
+	P90 = "weapon_p90"
+	PPBizon = "weapon_bizon"
+	UMP45 = "weapon_ump45"
+	AK47 = "weapon_ak47"
+	Aug = "weapon_aug"
+	Famas = "weapon_famas"
+	Galil = "weapon_galilar"
+	M4A1 = "weapon_m4a1"
+	M4A1_S = "weapon_m4a1_silencer"
+	SG556 = "weapon_sg556"
+	AWP = "weapon_awp"
+	G3SG1 = "weapon_g3sg1"
+	Scar20 = "weapon_scar20"
+	M249 = "weapon_m249"
+	Negev = "weapon_negev"
+	Nova = "weapon_nova"
+	SawedOff = "weapon_sawedoff"
+	Mag7 = "weapon_mag7"
+	XM1014 = "weapon_xm1014"
+	Bayonet = "weapon_bayonet"
+	FlipKnife = "weapon_knife_flip"
+	GutKnife = "weapon_knife_gut"
+	Karambit = "weapon_knife_karambit"
+	M9Bayonet = "weapon_knife_m9_bayonet"
+	HuntsmanKnife = "weapon_knife_tactical"
+	FalchionKnife = "weapon_knife_falchion"
+	BowieKnife = "weapon_knife_survival_bowie"
+	ButterflyKnife = "weapon_knife_butterfly"
+	ShaddowDaggers = "weapon_knife_push"
+	ParacordKnife = "weapon_knife_cord"
+	SurvivalKnife = "weapon_knife_canis"
+	UrsusKnife = "weapon_knife_ursus"
+	NajavaKnife = "weapon_knife_gypsy_jackknife"
+	NomadKnife = "weapon_knife_outdoor"
+	StilettoKnife = "weapon_knife_stiletto"
+	TalonKnife = "weapon_knife_widowmaker"
+	SkeletonKnife = "weapon_knife_skeleton"
+	ClassKnife = "weapon_knife_css"
+	Zeus = "weapon_taser"

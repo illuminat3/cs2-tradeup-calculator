@@ -1,6 +1,6 @@
-from search_settings import search_settings_service
+from dtos.search_settings import search_settings_service
 
-search_file = "search.json"
+search_file = "config/search.json"
 
 def main():
 	search_service = search_settings_service(search_file)

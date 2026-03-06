@@ -2,7 +2,7 @@ import json
 import urllib.request
 from dataclasses import dataclass
 from typing import Optional
-from skin_info import skin, rarity, collection, weapon_type
+from dtos.skin_info import skin, rarity, collection, weapon_type
 
 RARITY_MAP: dict[str, rarity] = {
 	"rarity_common_weapon":     rarity.consumer,
@@ -110,8 +110,8 @@ class ApiSkin:
 		)
 
 def fetch_raw() -> list[ApiSkin]:
-	print(f"Fetching {API_URL} ...")
-	with urllib.request.urlopen(API_URL, timeout=30) as resp:
+	print(f"Fetching {API_URL}")
+	with urllib.request.urlopen(API_URL, timeout=60) as resp:
 		raw: list[dict] = json.loads(resp.read().decode())
 	return [ApiSkin.from_dict(d) for d in raw]
 
@@ -156,17 +156,11 @@ def transform(api_skins: list[ApiSkin]) -> list[dict]:
 		}
 		results.append(entry)
 
-	print(
-		f"\nKept     : {len(results):,}\n"
-		f"Filtered : {skipped_star:,} ★ items  |  "
-		f"{skipped_rarity:,} unknown rarity  |  "
-		f"{skipped_weapon:,} unknown weapon  |  "
-		f"{skipped_dupe:,} wear duplicates"
-	)
+	print(f"Found {len(results)} skins")
 	return results
 
 
-def save(skins: list[dict], path: str = "skins.json") -> None:
+def save(skins: list[dict], path: str = "data/skins.json") -> None:
 	with open(path, "w", encoding="utf-8") as f:
 		json.dump(skins, f, indent=4, ensure_ascii=False)
 	print(f"Saved → {path}")
@@ -175,8 +169,4 @@ def save(skins: list[dict], path: str = "skins.json") -> None:
 if __name__ == "__main__":
 	api_skins = fetch_raw()
 	skins     = transform(api_skins)
-	save(skins, "skins.json")
-	if skins:
-		print(f"\nSample entry:\n{json.dumps(skins[0], indent=4)}")
-	else:
-		print("\nNo skins were kept — check WEAPON_LOOKUP / RARITY_MAP coverage.")
+	save(skins, "data/skins.json")
