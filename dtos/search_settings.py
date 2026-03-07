@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from search_inputs import search_input
+from dtos.search_inputs import search_input
 
 @dataclass
 class search_settings:
