@@ -33,6 +33,8 @@ jobs:
             fi
             echo "$script completed"
           done
+        env:
+          PYTHONPATH: ${{ github.workspace }}
       - name: Check for changes
         id: check_changes
         run: |
