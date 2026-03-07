@@ -163,7 +163,7 @@ def transform(api_skins: list[ApiSkin]) -> list[dict]:
 def save(skins: list[dict], path: str = "data/skins.json") -> None:
 	with open(path, "w", encoding="utf-8") as f:
 		json.dump(skins, f, indent=4, ensure_ascii=False)
-	print(f"Saved → {path}")
+	print(f"Saved: {path}")
 
 
 if __name__ == "__main__":

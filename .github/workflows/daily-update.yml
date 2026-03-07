@@ -39,7 +39,7 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet data/ || echo "changed=true" >> $GITHUB_OUTPUT
+          git status --porcelain data/ | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || true
       - name: Create branch, commit, and open PR
         if: steps.check_changes.outputs.changed == 'true'
         run: |
