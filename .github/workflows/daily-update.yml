@@ -24,6 +24,7 @@ jobs:
           fi
       - name: Run all maintenance scripts
         run: |
+          mkdir -p data
           for script in maintaining/*.py; do
             echo "Running $script..."
             python "$script"
