@@ -1,0 +1,60 @@
+name: Daily Update
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f maintaining/requirements.txt ]; then
+            pip install -r maintaining/requirements.txt
+          fi
+      - name: Run all maintenance scripts
+        run: |
+          for script in maintaining/*.py; do
+            echo "Running $script..."
+            python "$script"
+            if [ $? -ne 0 ]; then
+              echo "$script failed"
+              exit 1
+            fi
+            echo "$script completed"
+          done
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet data/ || echo "changed=true" >> $GITHUB_OUTPUT
+      - name: Create branch, commit, and open PR
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          DATE=$(date -u '+%Y-%m-%d')
+          BRANCH="chore/auto-update-data-${DATE}"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/
+          git commit -m "chore: auto-update data files [${DATE}]"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "chore: auto-update data files [${DATE}]" \
+            --body "Automated data update triggered by daily workflow." \
+            --base main \
+            --head "$BRANCH"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: No changes detected
+        if: steps.check_changes.outputs.changed != 'true'
+        run: echo "No changes detected in /data, skipping commit."
