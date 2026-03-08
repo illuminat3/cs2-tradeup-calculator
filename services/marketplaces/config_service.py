@@ -1,3 +1,4 @@
+import json
 from dtos.marketplace_config import marketplace_config
 
 class config_service:
@@ -6,7 +7,6 @@ class config_service:
 		self.marketplace_configs = self.load_marketplace_configs()
 
 	def load_marketplace_configs(self) -> dict[str, marketplace_config]:
-		import json
 		with open(self.config_file, "r", encoding="utf-8") as f:
 			data = json.load(f)
 			configs = {}
