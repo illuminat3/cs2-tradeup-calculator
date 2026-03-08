@@ -5,7 +5,7 @@ from services.skin_repository import skin_repository
 
 class input_analyser_service:
 	def __init__(self, skin_repository: skin_repository):
-			self.skin_repository = skin_repository
+		self.skin_repository = skin_repository
 
 	def analyse_input(self, search_settings: search_settings):
 		for input_filter in search_settings.input_filters:
