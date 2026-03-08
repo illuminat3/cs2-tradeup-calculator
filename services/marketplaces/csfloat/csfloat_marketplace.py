@@ -15,7 +15,7 @@ class csfloat_marketplace:
         max_search_float = skin.float_value + 0.1
         min_search_float = skin.min_float
         bucket_count = 5
-        increment = max_search_float / bucket_count
+        increment = (max_search_float - min_search_float) / bucket_count
         paint_index = self.csfloat_mapping.get_paint_index(skin)
         for i in range(bucket_count):
             min_float = min_search_float + i * increment
