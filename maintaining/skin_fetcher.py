@@ -146,12 +146,12 @@ def transform(api_skins: list[ApiSkin]) -> list[dict]:
 		seen.add(dedup_key)
 		entry = {
 			"finish_name":     s.finish_name,
-			"weapon_type":     s.weapon_type,
-			"collection_name": s.collection_name,
+			"weapon_type":     s.weapon_type.value,
+			"collection_name": s.collection_name.value if isinstance(s.collection_name, collection) else s.collection_name,
 			"min_float":       s.min_float,
 			"max_float":       s.max_float,
 			"float_value":     s.float_value,
-			"rarity":          s.rarity,
+			"rarity":          s.rarity.value,
 			"skin_name":       s.skin_name,
 		}
 		results.append(entry)
