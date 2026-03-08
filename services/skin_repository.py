@@ -1,10 +1,7 @@
-from dataclasses import asdict, fields
 import json
 from typing import List
 from dtos.skin_info import skin
-from dtos.search_inputs import search_input
-
-_EXCLUDED_FILTER_FIELDS = {f.name for f in fields(search_input)}
+from dtos.search_inputs import collection_input, search_input, skin_input, weapon_finish_input
 
 class skin_repository:
 	def __init__(self, skin_data_filepath: str):
@@ -12,13 +9,33 @@ class skin_repository:
 		self.skin_data = self._get_skin_data()
 
 	def get_skins_from_input(self, search_filter: search_input) -> List[skin]:
-		filters = {
-			k: v for k, v in asdict(search_filter).items()
-			if v is not None and k not in _EXCLUDED_FILTER_FIELDS
-		}
+		if isinstance(search_filter, weapon_finish_input):
+			return self._get_skins_by_weapon_finish(search_filter)
+		elif isinstance(search_filter, skin_input):
+			return self._get_skins_by_skin(search_filter)
+		elif isinstance(search_filter, collection_input):
+			return self._get_skins_by_collection(search_filter)
+		else:
+			raise ValueError(f"Unsupported search filter type: {type(search_filter)}")
+
+	def _get_skins_by_weapon_finish(self, search_filter: weapon_finish_input) -> List[skin]:
 		return [
 			s for s in self.skin_data
-			if all(getattr(s, key, None) == value for key, value in filters.items())
+			if s.weapon_type == search_filter.weapon_type 
+			and s.finish_name == search_filter.finish_name
+		]
+
+	def _get_skins_by_skin(self, search_filter: skin_input) -> List[skin]:
+		return [
+			s for s in self.skin_data
+			if s.skin_name == search_filter.skin_name
+		]
+
+	def _get_skins_by_collection(self, search_filter: collection_input) -> List[skin]:
+		return [
+			s for s in self.skin_data
+			if s.collection_name == search_filter.collection_name 
+			and s.rarity == search_filter.rarity
 		]
 
 	def _parse_skin_item(self, item: dict) -> skin | None:
