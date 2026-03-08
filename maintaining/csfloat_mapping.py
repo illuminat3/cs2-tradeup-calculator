@@ -13,7 +13,6 @@ def fetch_raw() -> list[dict]:
     with urllib.request.urlopen(SKINS_URL, timeout=60) as resp:
         return json.loads(resp.read().decode())
 
-
 def build_mapping(skins: list[dict]) -> dict:
     paint_index: dict[int, dict] = {}
 
@@ -36,13 +35,11 @@ def build_mapping(skins: list[dict]) -> dict:
 
     return {"paint_index": dict(sorted(paint_index.items()))}
 
-
 def save(mapping: dict, path: str = OUTPUT_PATH) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(mapping, f, indent=4, ensure_ascii=False)
     print(f"Saved: {path}")
     print(f"  paint_index entries: {len(mapping['paint_index'])}")
-
 
 if __name__ == "__main__":
     raw = fetch_raw()
