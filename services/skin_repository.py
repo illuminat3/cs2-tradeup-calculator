@@ -24,9 +24,9 @@ class skin_repository:
 			data = json.load(f)
 		return [s for item in data if (s := self._parse_skin_item(item)) is not None]
 
-	def get_skins_from_input(self, search_input) -> List[skin]:
+	def get_skins_from_input(self, search_filter: search_input) -> List[skin]:
 		filters = {
-			k: v for k, v in asdict(search_input).items()
+			k: v for k, v in asdict(search_filter).items()
 			if v is not None and k not in _EXCLUDED_FILTER_FIELDS
 		}
 		return [
