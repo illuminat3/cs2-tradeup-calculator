@@ -9,6 +9,17 @@ _EXCLUDED_FILTER_FIELDS = {f.name for f in fields(search_input)}
 class skin_repository:
 	def __init__(self, skin_data_filepath: str):
 		self.skin_data_filepath = skin_data_filepath
+		self.skin_data = self._get_skin_data()
+
+	def get_skins_from_input(self, search_filter: search_input) -> List[skin]:
+		filters = {
+			k: v for k, v in asdict(search_filter).items()
+			if v is not None and k not in _EXCLUDED_FILTER_FIELDS
+		}
+		return [
+			s for s in self.skin_data
+			if all(getattr(s, key, None) == value for key, value in filters.items())
+		]
 
 	def _parse_skin_item(self, item: dict) -> skin | None:
 		if "skin_name" in item:
@@ -19,17 +30,8 @@ class skin_repository:
 			item.pop("skin_name")
 		return skin(**item)
 
-	def get_skin_data(self) -> List[skin]:
+	def _get_skin_data(self) -> List[skin]:
 		with open(self.skin_data_filepath, "r", encoding="utf-8") as f:
 			data = json.load(f)
 		return [s for item in data if (s := self._parse_skin_item(item)) is not None]
 
-	def get_skins_from_input(self, search_filter: search_input) -> List[skin]:
-		filters = {
-			k: v for k, v in asdict(search_filter).items()
-			if v is not None and k not in _EXCLUDED_FILTER_FIELDS
-		}
-		return [
-			s for s in self.get_skin_data()
-			if all(getattr(s, key, None) == value for key, value in filters.items())
-		]
