@@ -11,7 +11,10 @@ def main():
 	input_analyser_svc = input_analyser_service(skin_repo)
 
 	search_settings = search_svc.get_search_settings()
-	input_analyser_svc.analyse_input(search_settings)
+	inputs = input_analyser_svc.analyse_input(search_settings)
+
+	
+
 
 if __name__ == "__main__":
 	main()
