@@ -1,0 +1,6 @@
+{
+  "csfloat": {
+    "api_key": "YOUR_API_KEY_HERE",
+    "base_url": "https://csfloat.com/api/v1/listings"
+  }
+}
