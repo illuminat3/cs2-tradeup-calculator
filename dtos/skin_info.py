@@ -24,7 +24,7 @@ class skin:
 			except ValueError:
 				self.collection_name = collection[self.collection_name]
 
-		if isinstance(self.rarity, str):
+		if isinstance(self.rarity, int):
 			try:
 				self.rarity = rarity(self.rarity)
 			except ValueError:
