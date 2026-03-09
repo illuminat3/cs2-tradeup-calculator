@@ -2,7 +2,7 @@ import json
 import urllib.request
 from dataclasses import dataclass
 from typing import Optional
-from dtos.skin_info import skin, rarity, collection, weapon_type
+from dtos.skin_info import skin, rarity, collection, weapon_type, category
 
 RARITY_MAP: dict[str, rarity] = {
 	"rarity_common_weapon":     rarity.consumer,
@@ -36,7 +36,6 @@ class ApiRef:
 	def from_dict(cls, d: dict) -> "ApiRef":
 		return cls(id=d.get("id", ""), name=d.get("name", ""))
 
-
 @dataclass
 class ApiCollection:
 	id:    str
@@ -54,7 +53,7 @@ class ApiCollection:
 	@property
 	def set_id(self) -> str:
 		raw = self.id.removeprefix("collection-")
-		return raw.replace("-", "_")              
+		return raw.replace("-", "_")
 
 @dataclass
 class ApiSkin:
@@ -63,8 +62,10 @@ class ApiSkin:
 	weapon:      ApiRef
 	pattern:     ApiRef
 	rarity:      ApiRef
+	category:    ApiRef
 	min_float:   float
 	max_float:   float
+	paint_index: int
 	collections: list[ApiCollection]
 	stattrak:    bool
 	souvenir:    bool
@@ -77,12 +78,21 @@ class ApiSkin:
 			weapon      = ApiRef.from_dict(d.get("weapon") or {}),
 			pattern     = ApiRef.from_dict(d.get("pattern") or {}),
 			rarity      = ApiRef.from_dict(d.get("rarity") or {}),
+			category    = ApiRef.from_dict(d.get("category") or {}),
 			min_float   = float(d.get("min_float") or 0.0),
 			max_float   = float(d.get("max_float") or 1.0),
+			paint_index = int(d.get("paint_index") or 0),
 			collections = [ApiCollection.from_dict(c) for c in (d.get("collections") or [])],
 			stattrak    = bool(d.get("stattrak", False)),
 			souvenir    = bool(d.get("souvenir", False)),
 		)
+
+	def _resolve_category(self) -> category:
+		if self.stattrak:
+			return category.StatTrak
+		if self.souvenir:
+			return category.Souvenir
+		return category.Normal
 
 	def to_skin(self) -> Optional["skin"]:
 		matched_weapon = WEAPON_LOOKUP.get(self.weapon.id)
@@ -101,12 +111,14 @@ class ApiSkin:
 
 		return skin(
 			finish_name     = self.pattern.name,
-			weapon_type     = matched_weapon.name,
+			weapon_type     = matched_weapon,
 			collection_name = collection_name,
 			min_float       = self.min_float,
 			max_float       = self.max_float,
 			float_value     = 0.0,
-			rarity          = matched_rarity.name,
+			rarity          = matched_rarity,
+			category        = self._resolve_category(),
+			paint_index     = self.paint_index,
 		)
 
 def fetch_raw() -> list[ApiSkin]:
@@ -114,7 +126,6 @@ def fetch_raw() -> list[ApiSkin]:
 	with urllib.request.urlopen(API_URL, timeout=60) as resp:
 		raw: list[dict] = json.loads(resp.read().decode())
 	return [ApiSkin.from_dict(d) for d in raw]
-
 
 def transform(api_skins: list[ApiSkin]) -> list[dict]:
 	seen:    set[str] = set()
@@ -144,27 +155,29 @@ def transform(api_skins: list[ApiSkin]) -> list[dict]:
 			continue
 
 		seen.add(dedup_key)
-		entry = {
-			"finish_name":     s.finish_name,
-			"weapon_type":     s.weapon_type.value,
-			"collection_name": s.collection_name.value if isinstance(s.collection_name, collection) else s.collection_name,
-			"min_float":       s.min_float,
-			"max_float":       s.max_float,
-			"float_value":     s.float_value,
-			"rarity":          s.rarity.value,
-			"skin_name":       s.skin_name,
-		}
-		results.append(entry)
+
+		for c in category:
+			entry = {
+				"finish_name":     s.finish_name,
+				"weapon_type":     s.weapon_type.value,
+				"collection_name": s.collection_name.value if isinstance(s.collection_name, collection) else s.collection_name,
+				"min_float":       s.min_float,
+				"max_float":       s.max_float,
+				"float_value":     s.float_value,
+				"rarity":          s.rarity.value,
+				"skin_name":       s.skin_name,
+				"category":        c.name,
+				"paint_index":     s.paint_index,
+			}
+			results.append(entry)
 
 	print(f"Found {len(results)} skins")
 	return results
-
 
 def save(skins: list[dict], path: str = "data/skins.json") -> None:
 	with open(path, "w", encoding="utf-8") as f:
 		json.dump(skins, f, indent=4, ensure_ascii=False)
 	print(f"Saved: {path}")
-
 
 if __name__ == "__main__":
 	api_skins = fetch_raw()
