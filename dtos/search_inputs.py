@@ -1,9 +1,10 @@
 from dataclasses import dataclass
-from dtos.counter_strike_enums import collection, rarity, weapon_type
+from dtos.counter_strike_enums import collection, rarity, weapon_type, category
 
 @dataclass
 class search_input:
 	count: int
+	category: category
 
 @dataclass
 class skin_input(search_input):
