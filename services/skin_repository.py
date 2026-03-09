@@ -23,12 +23,14 @@ class skin_repository:
 			s for s in self.skin_data
 			if s.weapon_type == search_filter.weapon_type 
 			and s.finish_name == search_filter.finish_name
+			and s.category == search_filter.category
 		]
 
 	def _get_skins_by_skin(self, search_filter: skin_input) -> List[skin]:
 		return [
 			s for s in self.skin_data
 			if s.skin_name == search_filter.skin_name
+			and s.category == search_filter.category
 		]
 
 	def _get_skins_by_collection(self, search_filter: collection_input) -> List[skin]:
@@ -36,6 +38,7 @@ class skin_repository:
 			s for s in self.skin_data
 			if s.collection_name == search_filter.collection_name 
 			and s.rarity == search_filter.rarity
+			and s.category == search_filter.category
 		]
 
 	def _parse_skin_item(self, item: dict) -> skin | None:
