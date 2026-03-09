@@ -18,7 +18,7 @@ class csfloat_marketplace:
 
 		max_search_float = skin.float_value + 0.1
 		min_search_float = skin.min_float
-		bucket_count = 5
+		bucket_count = 3
 		increment = max_search_float / bucket_count
 		total_listings = []
 
