@@ -1,10 +1,16 @@
 {
   "target_float": 0.15,
   "input_filters": [
-    { "count": 4, "skin_name": "AK-47 | Redline" },
-    { "count": 1, "weapon_type": "AK47", "finish_name": "Redline" },
+    { "count": 4, "category": "Normal", "skin_name": "AK-47 | Redline" },
+    {
+      "count": 1,
+      "category": "StatTrak",
+      "weapon_type": "AK47",
+      "finish_name": "Redline"
+    },
     {
       "count": 5,
+      "category": "Normal",
       "collection_name": "ThePhoenixCollection",
       "rarity": "classified"
     }
