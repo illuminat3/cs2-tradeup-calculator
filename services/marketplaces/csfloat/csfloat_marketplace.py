@@ -3,11 +3,9 @@ import urllib.parse
 import json
 from dtos.skin_info import skin
 from dtos.listing import listing
-from services.marketplaces.csfloat.csfloat_mapping import csfloat_mapping
 
 class csfloat_marketplace:
-	def __init__(self, csfloat_mapping: csfloat_mapping, api_key: str, base_url: str):
-		self.csfloat_mapping = csfloat_mapping
+	def __init__(self, api_key: str, base_url: str):
 		self.api_key = api_key
 		self.base_url = base_url
 
@@ -16,24 +14,23 @@ class csfloat_marketplace:
 		min_search_float = skin.min_float
 		bucket_count = 5
 		increment = max_search_float / bucket_count
-		paint_index = self.csfloat_mapping.get_paint_index(skin)
 		for i in range(bucket_count):
 			min_float = min_search_float + i * increment
 			max_float = min_search_float + (i + 1) * increment
 			print(f"Searching for listings with float between {min_float:.4f} and {max_float:.4f}")
-			listings = self.fetch_skins_for_float_range(min_float, max_float, paint_index, skin)
+			listings = self.fetch_skins_for_float_range(min_float, max_float, skin)
 			if listings:
 				return listings
 		return []
 
-	def fetch_skins_for_float_range(self, min_float: float, max_float: float, paint_index: int, input_skin: skin) -> list[listing]:
+	def fetch_skins_for_float_range(self, min_float: float, max_float: float, input_skin: skin) -> list[listing]:
 		params = {
 			"min_float": min_float,
 			"max_float": max_float,
 			"limit": 50,
 			"type": "buy_now",
-			"category": 1,
-			"paint_index": paint_index
+			"category": input_skin.category.value,
+			"paint_index": input_skin.paint_index
 		}
 		listings = []
 		cursor = None
@@ -62,7 +59,9 @@ class csfloat_marketplace:
 					min_float=min_float,
 					max_float=max_float,
 					float_value=float_value,
-					rarity=input_skin.rarity
+					rarity=input_skin.rarity,
+					category=input_skin.category,
+					paint_index=input_skin.paint_index
 				)
 				listings.append(listing(price=price, skin=marketplace_skin, url=csfloat_link))
 			cursor = data.get("cursor")

@@ -105,6 +105,11 @@ class rarity(Enum):
 	covert = 6
 	gold = 7 
 
+class category(Enum):
+	Normal = 1
+	StatTrak = 2
+	Souvenir = 3
+
 class weapon_type(Enum):
 	DesertEagle = "weapon_deagle"
 	DualBerettas = "weapon_elite"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from dtos.counter_strike_enums import collection, rarity, weapon_type
+from dtos.counter_strike_enums import collection, rarity, category, weapon_type
 
 @dataclass
 class skin:
@@ -10,6 +10,9 @@ class skin:
 	max_float: float
 	float_value: float
 	rarity: rarity
+	category: category
+	paint_index: int
+
 
 	def __post_init__(self):
 		if isinstance(self.weapon_type, str):
@@ -29,7 +32,24 @@ class skin:
 				self.rarity = rarity(self.rarity)
 			except ValueError:
 				self.rarity = rarity[self.rarity]
+		
+		if isinstance(self.rarity, str):
+			try:
+				self.rarity = rarity(self.rarity)
+			except ValueError:
+				self.rarity = rarity[self.rarity]
 
+		if isinstance(self.category, int):
+			try:
+				self.category = category(self.category)
+			except ValueError:
+				self.category = category[self.category]
+
+		if isinstance(self.category, str):
+			try:
+				self.category = category(self.category)
+			except ValueError:
+				self.category = category[self.category]
 	@property
 	def skin_name(self) -> str:
 		return f"{self.weapon_type.name} | {self.finish_name}"
