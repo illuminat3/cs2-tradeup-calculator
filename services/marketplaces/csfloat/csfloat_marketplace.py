@@ -14,14 +14,14 @@ class csfloat_marketplace:
 		min_search_float = skin.min_float
 		bucket_count = 5
 		increment = max_search_float / bucket_count
+		total_listings = []
 		for i in range(bucket_count):
 			min_float = min_search_float + i * increment
 			max_float = min_search_float + (i + 1) * increment
 			print(f"Searching for listings with float between {min_float:.4f} and {max_float:.4f}")
 			listings = self.fetch_skins_for_float_range(min_float, max_float, skin)
-			if listings:
-				return listings
-		return []
+			total_listings.extend(listings)
+		return total_listings
 
 	def fetch_skins_for_float_range(self, min_float: float, max_float: float, input_skin: skin) -> list[listing]:
 		params = {
