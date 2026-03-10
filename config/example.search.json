@@ -1,7 +1,7 @@
 {
   "target_float": 0.15,
   "input_filters": [
-    { "count": 4, "category": "Normal", "skin_name": "AK-47 | Redline" },
+    { "count": 4, "category": "Normal", "skin_name": "AK47 | Redline" },
     {
       "count": 1,
       "category": "StatTrak",
