@@ -1,5 +1,41 @@
 [
     {
+        "finish_name": "Crane Flight",
+        "weapon_type": "weapon_ak47",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "AK47 | Crane Flight",
+        "category": "Normal",
+        "paint_index": 1425
+    },
+    {
+        "finish_name": "Crane Flight",
+        "weapon_type": "weapon_ak47",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "AK47 | Crane Flight",
+        "category": "StatTrak",
+        "paint_index": 1425
+    },
+    {
+        "finish_name": "Crane Flight",
+        "weapon_type": "weapon_ak47",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "AK47 | Crane Flight",
+        "category": "Souvenir",
+        "paint_index": 1425
+    },
+    {
         "finish_name": "Searing Rage",
         "weapon_type": "weapon_ak47",
         "collection_name": "set_community_35",
@@ -4032,6 +4068,42 @@
         "paint_index": 1206
     },
     {
+        "finish_name": "Queen's Gambit",
+        "weapon_type": "weapon_awp",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "AWP | Queen's Gambit",
+        "category": "Normal",
+        "paint_index": 1422
+    },
+    {
+        "finish_name": "Queen's Gambit",
+        "weapon_type": "weapon_awp",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "AWP | Queen's Gambit",
+        "category": "StatTrak",
+        "paint_index": 1422
+    },
+    {
+        "finish_name": "Queen's Gambit",
+        "weapon_type": "weapon_awp",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "AWP | Queen's Gambit",
+        "category": "Souvenir",
+        "paint_index": 1422
+    },
+    {
         "finish_name": "Chrome Cannon",
         "weapon_type": "weapon_awp",
         "collection_name": "set_community_33",
@@ -5614,6 +5686,42 @@
         "skin_name": "PPBizon | Rust Coat",
         "category": "Souvenir",
         "paint_index": 203
+    },
+    {
+        "finish_name": "RMX",
+        "weapon_type": "weapon_bizon",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "PPBizon | RMX",
+        "category": "Normal",
+        "paint_index": 1418
+    },
+    {
+        "finish_name": "RMX",
+        "weapon_type": "weapon_bizon",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "PPBizon | RMX",
+        "category": "StatTrak",
+        "paint_index": 1418
+    },
+    {
+        "finish_name": "RMX",
+        "weapon_type": "weapon_bizon",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "PPBizon | RMX",
+        "category": "Souvenir",
+        "paint_index": 1418
     },
     {
         "finish_name": "Osiris",
@@ -9106,6 +9214,42 @@
         "skin_name": "DesertEagle | Calligraffiti",
         "category": "Souvenir",
         "paint_index": 114
+    },
+    {
+        "finish_name": "Firebreathing",
+        "weapon_type": "weapon_deagle",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "DesertEagle | Firebreathing",
+        "category": "Normal",
+        "paint_index": 1430
+    },
+    {
+        "finish_name": "Firebreathing",
+        "weapon_type": "weapon_deagle",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "DesertEagle | Firebreathing",
+        "category": "StatTrak",
+        "paint_index": 1430
+    },
+    {
+        "finish_name": "Firebreathing",
+        "weapon_type": "weapon_deagle",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "DesertEagle | Firebreathing",
+        "category": "Souvenir",
+        "paint_index": 1430
     },
     {
         "finish_name": "Serpent Strike",
@@ -13392,6 +13536,42 @@
         "paint_index": 1168
     },
     {
+        "finish_name": "Dark Polymer",
+        "weapon_type": "weapon_fiveseven",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "FiveSeven | Dark Polymer",
+        "category": "Normal",
+        "paint_index": 1429
+    },
+    {
+        "finish_name": "Dark Polymer",
+        "weapon_type": "weapon_fiveseven",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "FiveSeven | Dark Polymer",
+        "category": "StatTrak",
+        "paint_index": 1429
+    },
+    {
+        "finish_name": "Dark Polymer",
+        "weapon_type": "weapon_fiveseven",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "FiveSeven | Dark Polymer",
+        "category": "Souvenir",
+        "paint_index": 1429
+    },
+    {
         "finish_name": "Boost Protocol",
         "weapon_type": "weapon_fiveseven",
         "collection_name": "set_community_29",
@@ -15696,6 +15876,42 @@
         "paint_index": 1185
     },
     {
+        "finish_name": "Galigator",
+        "weapon_type": "weapon_galilar",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "Galil | Galigator",
+        "category": "Normal",
+        "paint_index": 1434
+    },
+    {
+        "finish_name": "Galigator",
+        "weapon_type": "weapon_galilar",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "Galil | Galigator",
+        "category": "StatTrak",
+        "paint_index": 1434
+    },
+    {
+        "finish_name": "Galigator",
+        "weapon_type": "weapon_galilar",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "Galil | Galigator",
+        "category": "Souvenir",
+        "paint_index": 1434
+    },
+    {
         "finish_name": "Stone Cold",
         "weapon_type": "weapon_galilar",
         "collection_name": "set_community_9",
@@ -17890,6 +18106,42 @@
         "skin_name": "Glock18 | Gold Toof",
         "category": "Souvenir",
         "paint_index": 129
+    },
+    {
+        "finish_name": "Fully Tuned",
+        "weapon_type": "weapon_glock",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "Glock18 | Fully Tuned",
+        "category": "Normal",
+        "paint_index": 1421
+    },
+    {
+        "finish_name": "Fully Tuned",
+        "weapon_type": "weapon_glock",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "Glock18 | Fully Tuned",
+        "category": "StatTrak",
+        "paint_index": 1421
+    },
+    {
+        "finish_name": "Fully Tuned",
+        "weapon_type": "weapon_glock",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 6,
+        "skin_name": "Glock18 | Fully Tuned",
+        "category": "Souvenir",
+        "paint_index": 1421
     },
     {
         "finish_name": "Mirror Mosaic",
@@ -20592,6 +20844,42 @@
         "paint_index": 1298
     },
     {
+        "finish_name": "Bock Blocks",
+        "weapon_type": "weapon_m249",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M249 | Bock Blocks",
+        "category": "Normal",
+        "paint_index": 1435
+    },
+    {
+        "finish_name": "Bock Blocks",
+        "weapon_type": "weapon_m249",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M249 | Bock Blocks",
+        "category": "StatTrak",
+        "paint_index": 1435
+    },
+    {
+        "finish_name": "Bock Blocks",
+        "weapon_type": "weapon_m249",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M249 | Bock Blocks",
+        "category": "Souvenir",
+        "paint_index": 1435
+    },
+    {
         "finish_name": "Hypnosis",
         "weapon_type": "weapon_m249",
         "collection_name": "set_community_34",
@@ -22428,6 +22716,42 @@
         "paint_index": 1165
     },
     {
+        "finish_name": "Zubastick",
+        "weapon_type": "weapon_m4a1",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M4A1 | Zubastick",
+        "category": "Normal",
+        "paint_index": 1432
+    },
+    {
+        "finish_name": "Zubastick",
+        "weapon_type": "weapon_m4a1",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M4A1 | Zubastick",
+        "category": "StatTrak",
+        "paint_index": 1432
+    },
+    {
+        "finish_name": "Zubastick",
+        "weapon_type": "weapon_m4a1",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "M4A1 | Zubastick",
+        "category": "Souvenir",
+        "paint_index": 1432
+    },
+    {
         "finish_name": "Fade",
         "weapon_type": "weapon_m4a1_silencer",
         "collection_name": "set_realism_camo",
@@ -23830,6 +24154,42 @@
         "skin_name": "M4A1_S | Black Lotus",
         "category": "Souvenir",
         "paint_index": 1166
+    },
+    {
+        "finish_name": "Electrum",
+        "weapon_type": "weapon_m4a1_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "M4A1_S | Electrum",
+        "category": "Normal",
+        "paint_index": 1433
+    },
+    {
+        "finish_name": "Electrum",
+        "weapon_type": "weapon_m4a1_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "M4A1_S | Electrum",
+        "category": "StatTrak",
+        "paint_index": 1433
+    },
+    {
+        "finish_name": "Electrum",
+        "weapon_type": "weapon_m4a1_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "M4A1_S | Electrum",
+        "category": "Souvenir",
+        "paint_index": 1433
     },
     {
         "finish_name": "Liquidation",
@@ -29340,6 +29700,42 @@
         "paint_index": 1386
     },
     {
+        "finish_name": "Amberline",
+        "weapon_type": "weapon_mp7",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP7 | Amberline",
+        "category": "Normal",
+        "paint_index": 1436
+    },
+    {
+        "finish_name": "Amberline",
+        "weapon_type": "weapon_mp7",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP7 | Amberline",
+        "category": "StatTrak",
+        "paint_index": 1436
+    },
+    {
+        "finish_name": "Amberline",
+        "weapon_type": "weapon_mp7",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP7 | Amberline",
+        "category": "Souvenir",
+        "paint_index": 1436
+    },
+    {
         "finish_name": "Just Smile",
         "weapon_type": "weapon_mp7",
         "collection_name": "set_community_33",
@@ -31030,6 +31426,42 @@
         "skin_name": "MP9 | Nexus",
         "category": "Souvenir",
         "paint_index": 1193
+    },
+    {
+        "finish_name": "Urban Sovereign",
+        "weapon_type": "weapon_mp9",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP9 | Urban Sovereign",
+        "category": "Normal",
+        "paint_index": 1423
+    },
+    {
+        "finish_name": "Urban Sovereign",
+        "weapon_type": "weapon_mp9",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP9 | Urban Sovereign",
+        "category": "StatTrak",
+        "paint_index": 1423
+    },
+    {
+        "finish_name": "Urban Sovereign",
+        "weapon_type": "weapon_mp9",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 4,
+        "skin_name": "MP9 | Urban Sovereign",
+        "category": "Souvenir",
+        "paint_index": 1423
     },
     {
         "finish_name": "Broken Record",
@@ -35532,6 +35964,42 @@
         "paint_index": 130
     },
     {
+        "finish_name": "Kintsugi",
+        "weapon_type": "weapon_p250",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P250 | Kintsugi",
+        "category": "Normal",
+        "paint_index": 1420
+    },
+    {
+        "finish_name": "Kintsugi",
+        "weapon_type": "weapon_p250",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P250 | Kintsugi",
+        "category": "StatTrak",
+        "paint_index": 1420
+    },
+    {
+        "finish_name": "Kintsugi",
+        "weapon_type": "weapon_p250",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P250 | Kintsugi",
+        "category": "Souvenir",
+        "paint_index": 1420
+    },
+    {
         "finish_name": "Copper Oxide",
         "weapon_type": "weapon_p250",
         "collection_name": "set_timed_drops_neutral",
@@ -37330,6 +37798,42 @@
         "skin_name": "P90 | Wave Breaker",
         "category": "Souvenir",
         "paint_index": 1190
+    },
+    {
+        "finish_name": "Deathgaze",
+        "weapon_type": "weapon_p90",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P90 | Deathgaze",
+        "category": "Normal",
+        "paint_index": 1419
+    },
+    {
+        "finish_name": "Deathgaze",
+        "weapon_type": "weapon_p90",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P90 | Deathgaze",
+        "category": "StatTrak",
+        "paint_index": 1419
+    },
+    {
+        "finish_name": "Deathgaze",
+        "weapon_type": "weapon_p90",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 5,
+        "skin_name": "P90 | Deathgaze",
+        "category": "Souvenir",
+        "paint_index": 1419
     },
     {
         "finish_name": "Randy Rush",
@@ -39742,6 +40246,42 @@
         "skin_name": "SawedOff | Crimson Batik",
         "category": "Souvenir",
         "paint_index": 1391
+    },
+    {
+        "finish_name": "Fusion",
+        "weapon_type": "weapon_sawedoff",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "SawedOff | Fusion",
+        "category": "Normal",
+        "paint_index": 1427
+    },
+    {
+        "finish_name": "Fusion",
+        "weapon_type": "weapon_sawedoff",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "SawedOff | Fusion",
+        "category": "StatTrak",
+        "paint_index": 1427
+    },
+    {
+        "finish_name": "Fusion",
+        "weapon_type": "weapon_sawedoff",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "SawedOff | Fusion",
+        "category": "Souvenir",
+        "paint_index": 1427
     },
     {
         "finish_name": "Analog Input",
@@ -45864,6 +46404,42 @@
         "paint_index": 1194
     },
     {
+        "finish_name": "Fragment",
+        "weapon_type": "weapon_ump45",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "UMP45 | Fragment",
+        "category": "Normal",
+        "paint_index": 1426
+    },
+    {
+        "finish_name": "Fragment",
+        "weapon_type": "weapon_ump45",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "UMP45 | Fragment",
+        "category": "StatTrak",
+        "paint_index": 1426
+    },
+    {
+        "finish_name": "Fragment",
+        "weapon_type": "weapon_ump45",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "UMP45 | Fragment",
+        "category": "Souvenir",
+        "paint_index": 1426
+    },
+    {
         "finish_name": "Late Night Transit",
         "weapon_type": "weapon_ump45",
         "collection_name": "set_train_2025",
@@ -47446,6 +48022,42 @@
         "skin_name": "USP_S | Jawbreaker",
         "category": "Souvenir",
         "paint_index": 1173
+    },
+    {
+        "finish_name": "Silent Shot",
+        "weapon_type": "weapon_usp_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "USP_S | Silent Shot",
+        "category": "Normal",
+        "paint_index": 1431
+    },
+    {
+        "finish_name": "Silent Shot",
+        "weapon_type": "weapon_usp_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "USP_S | Silent Shot",
+        "category": "StatTrak",
+        "paint_index": 1431
+    },
+    {
+        "finish_name": "Silent Shot",
+        "weapon_type": "weapon_usp_silencer",
+        "collection_name": "set_community_37",
+        "min_float": 0.0,
+        "max_float": 1.0,
+        "float_value": 0.0,
+        "rarity": 3,
+        "skin_name": "USP_S | Silent Shot",
+        "category": "Souvenir",
+        "paint_index": 1431
     },
     {
         "finish_name": "Ancient Lore",
