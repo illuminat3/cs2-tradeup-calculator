@@ -95,6 +95,7 @@ class collection(Enum):
 	OperationRiptideAgents = "set_op11_characters"
 	BrokenFangAgents = "set_op10_characters"
 	ShatteredWebAgents = "set_op9_characters"
+	TheDeadHandCollection = "set_community_37"
 	
 class rarity(Enum):
 	consumer = 1
