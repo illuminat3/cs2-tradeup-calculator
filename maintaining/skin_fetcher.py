@@ -99,9 +99,12 @@ class ApiSkin:
 		if matched_weapon is None:
 			return None
 
-		matched_rarity = RARITY_MAP.get(self.rarity.id)
-		if matched_rarity is None:
-			return None
+		if "★" in self.name:
+			matched_rarity = rarity.gold
+		else:
+			matched_rarity = RARITY_MAP.get(self.rarity.id)
+			if matched_rarity is None:
+				return None
 
 		collection_name: Optional[str] = None
 		if self.collections:
@@ -130,16 +133,11 @@ def fetch_raw() -> list[ApiSkin]:
 def transform(api_skins: list[ApiSkin]) -> list[dict]:
 	seen:    set[str] = set()
 	results: list[dict] = []
-	skipped_star   = 0
 	skipped_rarity = 0
 	skipped_weapon = 0
 	skipped_dupe   = 0
 
 	for api_skin in api_skins:
-		if "★" in api_skin.name:
-			skipped_star += 1
-			continue
-
 		dedup_key = f"{api_skin.weapon.id}::{api_skin.pattern.id}"
 		if dedup_key in seen:
 			skipped_dupe += 1
